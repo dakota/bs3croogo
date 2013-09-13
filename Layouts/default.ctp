@@ -36,7 +36,7 @@ if (!empty($this->Regions->blocks('left')) && !empty($this->Regions->blocks('rig
 				<div class="row">
 					<div class="col-xs-12 <?php echo $span; ?>">
 					<?php
-						echo $this->Layout->sessionFlash();
+						echo $this->Custom->sessionFlash();
 						echo $content_for_layout;
 					?>
 					</div>

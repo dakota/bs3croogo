@@ -121,4 +121,23 @@ class CustomHelper extends Helper {
 		return $output;
 	}
 
+/**
+ * Show flash messages
+ *
+ * @return string
+ */
+	public function sessionFlash() {
+		$messages = $this->Session->read('Message');
+		$output = '';
+		if (is_array($messages)) {
+			foreach ($messages as $key => $message) {
+				//We need to change "Default" flash message element in order to use our bootstrap based flash message
+				if ($message['element'] == 'default') {
+					CakeSession::write('Message.' . $key . '.element', 'flash');
+				}
+				$output .= $this->Session->flash($key);
+			}
+		}
+		return $output;
+	}
 }
