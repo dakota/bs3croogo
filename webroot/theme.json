@@ -1,0 +1,19 @@
+{
+	"name" : "Bootstrap 3 for Croogo",
+	"description" : "Basic Croogo theme using Bootstrap 3",
+	"screenshot" : "/screenshot.png",
+
+	"author" : "Walther Lalk",
+	"authorEmail" : "emailme@waltherlalk.com",
+	"authorUrl" : "https://twitter.com/dakotairene",
+
+	"menus" : [
+		"main",
+		"footer"
+	],
+
+	"regions" : [
+		"left",
+		"right"
+	]
+}

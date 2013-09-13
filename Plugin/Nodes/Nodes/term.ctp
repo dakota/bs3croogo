@@ -1,0 +1,1 @@
+<?php echo $this->element('Nodes.node_index');
