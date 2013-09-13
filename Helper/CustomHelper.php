@@ -61,7 +61,7 @@ class CustomHelper extends Helper {
 		$options = array_merge($_options, $options);
 
 		$output = '';
-		foreach ($links AS $link) {
+		foreach ($links as $link) {
 			$linkAttr = array(
 				'id' => 'link-' . $link['Link']['id'],
 				'rel' => $link['Link']['rel'],
@@ -70,7 +70,7 @@ class CustomHelper extends Helper {
 				'class' => $link['Link']['class'],
 			);
 
-			foreach ($linkAttr AS $attrKey => $attrValue) {
+			foreach ($linkAttr as $attrKey => $attrValue) {
 				if ($attrValue == null) {
 					unset($linkAttr[$attrKey]);
 				}
