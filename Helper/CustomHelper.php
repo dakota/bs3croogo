@@ -29,9 +29,10 @@ class CustomHelper extends Helper {
 			'tagAttributes' => array(),
 			'selected' => 'active',
 			'dropdown' => false,
-			'dropdownClass' => 'dropdown',
+			'dropdownClass' => 'dropdown-toggle',
+			'dropdownListClass' => 'dropdown',
 			'dropdownMenuClass' => 'dropdown-menu',
-			'toggle' => 'dropdown-toggle',
+			'toggle' => 'dropdown',
 			'menuClass' => 'nav navbar-nav',
 			'element' => 'menu',
 		);
@@ -44,7 +45,7 @@ class CustomHelper extends Helper {
 		$output = $this->_View->element($options['element'], array(
 			'menu' => $menu,
 			'options' => $options,
-				));
+		));
 		return $output;
 	}
 
@@ -100,8 +101,8 @@ class CustomHelper extends Helper {
 				if (!isset($linkAttr['class'])) {
 					$linkAttr['class'] = '';
 				}
-				$linkOutput = $this->Html->link($link['Link']['title'] . '<b class="caret"></b>', $link['Link']['link'], array('class' => $options['toggle'], 'data-toggle' => $options['dropdownClass'], 'escape' => false));
-				$linkAttr['class'] .= ' ' . $options['dropdownClass'];
+				$linkOutput = $this->Html->link($link['Link']['title'] . ' <b class="caret"></b>', $link['Link']['link'], array('class' => $options['dropdownClass'], 'data-toggle' => $options['toggle'], 'escape' => false));
+				$linkAttr['class'] .= ' ' . $options['dropdownListClass'];
 				$linkOutput .= $this->nestedLinks($link['children'], $options, $depth + 1);
 			}
 			$linkOutput = $this->Html->tag('li', $linkOutput, $linkAttr);
