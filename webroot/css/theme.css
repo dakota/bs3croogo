@@ -77,3 +77,11 @@ body {
 	padding-left: 10px;
 	padding-bottom: 10px;
 }
+
+.child-comments {
+	margin-left: 15px;
+}
+
+.comment {
+	padding-bottom: 15px;
+}

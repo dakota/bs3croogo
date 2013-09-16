@@ -14,7 +14,7 @@
 		));
 	}
 	if ($type['Type']['format_show_date']) {
-		echo ' ' . __d('croogo', 'on') . ' <span class="glyphicon glyphicon-time"></span> ';
+		echo ' ' . __d('croogo', 'on') . ' ';
 		echo $this->Html->tag('em', $this->Time->format(Configure::read('Reading.date_time_format'), $this->Nodes->field('created'), null, Configure::read('Site.timezone')), array('class' => 'date'));
 	}
 ?>

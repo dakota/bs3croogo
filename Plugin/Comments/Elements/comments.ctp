@@ -1,4 +1,4 @@
-<div class="comments">
+<div class="comments panel-group">
 <?php
 	$commentHeading = $node['Node']['comment_count'] . ' ';
 	if ($node['Node']['comment_count'] == 1) {
